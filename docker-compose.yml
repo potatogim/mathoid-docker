@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mathoid:
+    image: mathoid:latest
+    #build:
+    #  context: .
+    container_name: mathoid
+    restart: unless-stopped
+    ports:
+      - "10044:10044"
+    volumes:
+      - ./config.yaml:/usr/local/lib/mathoid/config.yaml
